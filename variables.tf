@@ -35,11 +35,10 @@ variable "admin_password" {
   description = "Admin password for the VM"
 }
 
-variable "azurerm_resource_group.example.name" {
+variable "resource_group_name" {
   description = "Resource group name"
 }
 
-variable "azurerm_resource_group.example.location" {
+variable "resource_group_location" {
   description = "Resource group location"
 }
-
