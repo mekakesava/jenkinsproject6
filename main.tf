@@ -3,12 +3,13 @@ provider "azurerm" {
   client_id       = var.azure_client_id
   client_secret   = var.azure_client_secret
   tenant_id       = var.azure_tenant_id
+  features        = {}
 }
 
-# resource "azurerm_resource_group" "example" {
-#  name     = "example-resources"
-#  location = var.azure_location
-# }
+resource "azurerm_resource_group" "example" {
+  name     = var.resource_group_name
+  location = var.resource_group_location
+}
 
 resource "azurerm_virtual_network" "example" {
   name                = "example-network"
